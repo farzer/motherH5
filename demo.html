@@ -9,9 +9,23 @@
 <link rel="stylesheet" type="text/css" href="H5FullscreenPage.css">
 <link rel="stylesheet" type="text/css" href="page-animation.css">
 <link rel="stylesheet" type="text/css" href="style.css">
-
+<link rel="prefetch" href="./mother.mp3" />
+<style>
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(./images/loading.gif) center no-repeat #fff;
+}
+</style>
 </head>
 <body class="H5FullscreenPage">
+    <div class="se-pre-con"></div>
     <div class="H5FullscreenPage-wrap">
         <div class="item item1">
             <div class="part part1 fadeIn">
@@ -114,10 +128,13 @@
             </div>
         </div>
     </div>
-    <script src="./zepto.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+    <script type="text/javascript" src="fx_base.js"></script>
+    <script type="text/javascript" src="fx.js"></script>
     <script type="text/javascript" src="H5FullscreenPage.js"></script>
     <script type="text/javascript">
-    $(document).ready(function(){
+    window.onload = function() {
+        $(".se-pre-con").fadeOut("slow");
         H5FullscreenPage.init({
             'type':3,
             'pageShow' : function(dom){
@@ -127,10 +144,10 @@
             'useMusic' : {
                 'autoPlay' : true,
                 'loopPlay' : true,
-                'src' : 'http://m10.music.126.net/20180513123035/7320c1f4098fe85dd79bb3833012f76e/ymusic/1de8/501d/8578/9b98803ee22a15455c0738c3e181a179.mp3'
+                'src' : './mother.mp3'
             }
         });
-    });
+    }
     </script>
 </body>
 </html>
