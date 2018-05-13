@@ -117,17 +117,19 @@
     <script src="./zepto.min.js"></script>
     <script type="text/javascript" src="H5FullscreenPage.js"></script>
     <script type="text/javascript">
-    H5FullscreenPage.init({
-        'type':3,
-        'pageShow' : function(dom){
-        },
-        'pageHide' : function(dom){
-        },
-        'useMusic' : {
-            'autoPlay' : true,
-            'loopPlay' : true,
-            'src' : './mother.mp3'
-        }
+    $(document).ready(function(){
+        H5FullscreenPage.init({
+            'type':3,
+            'pageShow' : function(dom){
+            },
+            'pageHide' : function(dom){
+            },
+            'useMusic' : {
+                'autoPlay' : true,
+                'loopPlay' : true,
+                'src' : './mother.mp3'
+            }
+        });
     });
     </script>
 </body>
