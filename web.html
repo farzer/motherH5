@@ -30,6 +30,10 @@ ul {
   background-size: contain;
 }
 
+.item1 {
+  background-image: url(http://oxjqty7ze.bkt.clouddn.com/18-5-13/36727413.jpg);
+}
+
 .item2 {
   background-image: url(http://oxjqty7ze.bkt.clouddn.com/18-5-13/36727413.jpg);
 }
@@ -325,13 +329,21 @@ ul {
     <script src="./zepto.min.js"></script>
     <script type="text/javascript" src="H5FullscreenPage.js"></script>
     <script type="text/javascript">
-    H5FullscreenPage.init({
-        'type':3,
-        'pageShow' : function(dom){
-        },
-        'pageHide' : function(dom){
-        }
-    });
+    window.onload = function() {
+      H5FullscreenPage.init({
+          'type':3,
+          'pageShow' : function(dom){
+          },
+          'pageHide' : function(dom){
+          },
+          'useMusic' : {
+              'autoPlay' : true,
+              'loopPlay' : true,
+              'src' : './mother.mp3'
+          }
+      });
+    }
+    
     </script>
 </body>
 </html>
