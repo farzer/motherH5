@@ -15,8 +15,8 @@ ul {
   list-style: none;
 }
 
-.item5 {
-  background-size: contain;
+.item1 {
+  background-image: url('./images/animate02.gif');
 }
 
 .item2 {
